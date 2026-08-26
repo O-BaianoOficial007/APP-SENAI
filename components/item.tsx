@@ -1,0 +1,17 @@
+import { ImageSourcePropType, View, Text, Image, StyleSheet } from "react-native";
+
+
+export const item = ({picture, title, text} : {picture: ImageSourcePropType, title: string, text: string}) => {
+    return(
+        <View>
+            <Image source={picture}/>
+            <View>
+                <Text>{title}</Text>
+                <Text>{text}</Text>
+            </View>
+        </View>
+    )
+}
+const s = StyleSheet.create({
+    
+})

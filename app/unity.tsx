@@ -1,10 +1,30 @@
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity, Image, StyleSheet} from "react-native";
+import { router } from "expo-router";
 
 
 export default function Apresentacao(){
     return(
         <View>
             <Text>Unity</Text>
+             <View style={s.nav}>
+                <TouchableOpacity onPress={() => router.push('/contato')}>
+                    <Image source={require('../assets/icons/setaE.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/card')}>
+                    <Image source={require('../assets/icons/setaD.png')}/>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
+const s = StyleSheet.create({
+    nav:{
+        position: 'fixed',
+        bottom: 0,
+        backgroundColor: '#D9D9D9',
+        width: '100%',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        padding: 20
+    },
+})

@@ -6,8 +6,8 @@ const image = {uri: 'https://legacy.reactjs.org/logo-og.png'}
 export default function Home() {
   return (
     <View style={s.container}>
-      <ImageBackground source={require('../assets/images/image2.png')} resizeMode="cover" style={s.image}/>
-      <Image style={s.logo} source={require('../assets/images/nba.png')}/>
+      <ImageBackground source={require('../assets/images/taçaCopa1.png')} resizeMode="cover" style={s.image}/>
+      <Image style={s.logo} source={require('../assets/images/logoCopa.png')}/>
       <TouchableOpacity style={s.btn} onPress={() => router.push('/card')}>
         <Text style={s.btnText}>ENTRAR</Text>
       </TouchableOpacity>
@@ -24,13 +24,14 @@ const s = StyleSheet.create({
     justifyContent: 'center',
   },
   btn: {
-    position: 'absolute',
-    bottom: 100,
-    left: 40,
+    alignSelf: 'center',
     backgroundColor: '#D9D9D9',
     paddingVertical: 20,
     paddingHorizontal: 100,
-    borderRadius: 10
+    borderRadius: 10,
+    marginTop: 400,
+    marginHorizontal: 50,
+    marginBottom: 50
   },
   btnText:{
     color: '#ffffff',
@@ -38,9 +39,8 @@ const s = StyleSheet.create({
     fontSize: 30
   },
   logo: {
-    position: 'absolute',
-    top: 50,
-    left: 70
+    marginHorizontal: 100,
+    marginTop: 50
   },
 
 });
