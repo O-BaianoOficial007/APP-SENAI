@@ -18,3 +18,4 @@ const data =[
         "image": require('@/assets/images/itália.png')
     }
 ]
+export default data
