@@ -6,23 +6,22 @@ import { Item } from '@/components/item'
 
 export default function Card(){
     return(
-       <View>
-        <TouchableOpacity onPress={() => router.push('/')}>
-            <Text>Sair</Text>
-        </TouchableOpacity>
-        <FlatList data={dados} renderItem={({item}) => (
-                <Item picture={item.image} title={item.title} text={item.text} />
-            )}>
+       <View style={s.screen}>
+            <TouchableOpacity onPress={() => router.push('/')} style={s.button}>
+                <Text>Sair</Text>
+            </TouchableOpacity>
+            <FlatList data={dados} renderItem={({item}) => (
+                    <Item picture={item.image} title={item.title} text={item.text} />
+                )}>
             </FlatList>
-
-        <View style={s.nav}>
-            <TouchableOpacity onPress={() => router.push('/contato')}>
-                <Image source={require('../assets/icons/setaE.png')}/>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.push('/unity')}>
-                <Image source={require('../assets/icons/setaD.png')}/>
-            </TouchableOpacity>
-        </View>
+            <View style={s.nav}>
+                <TouchableOpacity onPress={() => router.push('/contato')}>
+                    <Image source={require('../assets/icons/setaE.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/unity')}>
+                    <Image source={require('../assets/icons/setaD.png')}/>
+                </TouchableOpacity>
+            </View>
        </View>
     )
 }
@@ -36,4 +35,13 @@ const s = StyleSheet.create({
         flexDirection: 'row',
         padding: 20
     },
+    screen:{
+        flex: 1,
+    },
+    button:{
+        alignItems: 'center',
+        marginTop: 30,
+        backgroundColor: '#054A91',
+        marginHorizontal: 70
+    }
 })
