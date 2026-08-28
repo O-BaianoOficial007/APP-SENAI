@@ -42,6 +42,9 @@ const s = StyleSheet.create({
         alignItems: 'center',
         marginTop: 30,
         backgroundColor: '#054A91',
-        marginHorizontal: 70
+        width: 60,
+        marginHorizontal: 170,
+        borderRadius: 3,
+        padding: 6
     }
 })
